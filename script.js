@@ -206,3 +206,19 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+
+/**** for of loop (loop through array)****/
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+for (const item of menu) console.log(item);
+
+console.log(menu.entries());
+console.log([...menu.entries()]);
+for (const item of menu.entries()) console.log(item);
+for (const item of menu.entries()) {
+  console.log(`${item[0] + 1}: ${item[1]}`);
+}
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
